@@ -14,7 +14,7 @@ define floorplan model
   gui_outline 0
   gripper_return 0
   fiducial_return 0
-  laser_return 1
+  laser_return 0
 )
 
 resolution 0.02
@@ -33,12 +33,12 @@ floorplan
   name "maze"
   bitmap "../maps/maze.png"
   size [ 10.0 10.0 2.0 ]
-  pose [  5.0  5.0 0.0 0.0 ]
+  pose [  -5.0  -5.0 0.0 0.0 ]
 )
 
 # throw in a robot
 carlike_robot
 (
-  pose [ 2.0 2.0 0.0 0.0 ]
+  pose [ 0.0 0.0 0.0 0.0 ]
   name "robot"
 )
