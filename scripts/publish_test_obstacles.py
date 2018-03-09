@@ -8,8 +8,8 @@ from geometry_msgs.msg import PolygonStamped, Point32
 
 
 def publish_obstacle_msg():
-  pub = rospy.Publisher('/test_optim_node/obstacles', ObstacleMsg, queue_size=1)
-  #pub = rospy.Publisher('/p3dx/move_base/TebLocalPlannerROS/obstacles', ObstacleMsg, queue_size=1)
+  #pub = rospy.Publisher('/test_optim_node/obstacles', ObstacleMsg, queue_size=1)
+  pub = rospy.Publisher('/move_base/TebLocalPlannerROS/obstacles', ObstacleMsg, queue_size=1)
   rospy.init_node("test_obstacle_msg")
 
 
@@ -20,7 +20,7 @@ def publish_obstacle_msg():
   # Add point obstacle
   obstacle_msg.obstacles.append(PolygonStamped())
   obstacle_msg.obstacles[0].polygon.points = [Point32()]
-  obstacle_msg.obstacles[0].polygon.points[0].x = 1.5
+  obstacle_msg.obstacles[0].polygon.points[0].x = 0
   obstacle_msg.obstacles[0].polygon.points[0].y = 0
   obstacle_msg.obstacles[0].polygon.points[0].z = 0
 
@@ -28,12 +28,12 @@ def publish_obstacle_msg():
   # Add line obstacle
   obstacle_msg.obstacles.append(PolygonStamped())
   line_start = Point32()
-  line_start.x = -2.5
-  line_start.y = 0.5
+  line_start.x = 0.0
+  line_start.y = 1.0
   #line_start.y = -3
   line_end = Point32()
-  line_end.x = -2.5
-  line_end.y = 2
+  line_end.x = 1.0
+  line_end.y = 1.0
   #line_end.y = -4
   obstacle_msg.obstacles[1].polygon.points = [line_start, line_end]
   
@@ -56,8 +56,8 @@ def publish_obstacle_msg():
   while not rospy.is_shutdown():
     
     # Vary y component of the point obstacle
-    obstacle_msg.obstacles[0].polygon.points[0].y = 1*math.sin(t)
-    t = t + 0.1
+    #obstacle_msg.obstacles[0].polygon.points[0].y = 1*math.sin(t)
+    #t = t + 0.1
     
     pub.publish(obstacle_msg)
     
