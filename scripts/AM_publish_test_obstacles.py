@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import rospy, math
-from teb_local_planner.msg import ObstacleMsg
+from costmap_converter.msg import ObstacleArrayMsg
 from geometry_msgs.msg import PolygonStamped, Point32
 
 import tf
@@ -9,11 +9,11 @@ import tf
 def publish_obstacle_msg():
 
 	#pub = rospy.Publisher('/test_optim_node/obstacles', ObstacleMsg, queue_size=1)
-	pub = rospy.Publisher('/move_base/TebLocalPlannerROS/obstacles', ObstacleMsg, queue_size=1)
+	pub = rospy.Publisher('/move_base/TebLocalPlannerROS/obstacles', ObstacleArrayMsg, queue_size=1)
 
 	rospy.init_node("publish_obstacles")
 
-	obstacle_msg = ObstacleMsg()
+	obstacle_msg = ObstacleArrayMsg()
 	obstacle_msg.header.stamp = rospy.Time.now()
 	obstacle_msg.header.frame_id = "odom"
 
@@ -33,7 +33,7 @@ def publish_obstacle_msg():
 	v4_x = 0
 	v4_y = 0.5
 	
-	
+	print "I am INNNNN!"
 
 	obstacle_msg.obstacles.append(PolygonStamped())
 	v1 = Point32()
