@@ -1,6 +1,6 @@
 TebLocalPlannerROS:
 
- odom_topic: /ak2/odometry/filtered
+ odom_topic: odom
     
  # Trajectory
   
