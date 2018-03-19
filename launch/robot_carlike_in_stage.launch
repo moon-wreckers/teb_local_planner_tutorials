@@ -8,7 +8,7 @@
   - rviz view
  -->
 <launch>
-
+    <!--group ns="ak2"-->
         <!--  ************** Global Parameters ***************  -->
         <param name="/use_sim_time" value="false"/>
 
@@ -52,5 +52,5 @@
 
 	  <!--  **************** Visualisation ****************  -->
 	  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find teb_local_planner_tutorials)/cfg/rviz_navigation.rviz"/>
-
+    <!--/group-->
 </launch>

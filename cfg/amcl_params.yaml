@@ -1,6 +1,6 @@
 use_map_topic: true
 
-odom_frame_id: "/ak1/odometry/filtered"
+odom_frame_id: "/ak2/odometry/filtered"
 base_frame_id: "base_footprint"
 global_frame_id: "/map"
 
