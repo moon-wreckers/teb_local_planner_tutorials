@@ -1,6 +1,6 @@
 local_costmap:
   global_frame: /map
-  robot_base_frame: LHR_0EB0243A
+  robot_base_frame: /ak2_base_link
   update_frequency: 5.0
   publish_frequency: 2.0
   static_map: false

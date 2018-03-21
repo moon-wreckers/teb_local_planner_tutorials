@@ -225,11 +225,15 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
-        LHB_892315F9:
+        LHB_7B32DB97:
+          Value: true
+        LHR_09DE74EE:
           Value: true
         LHR_0EB0243A:
           Value: false
         ak1_base_link:
+          Value: true
+        ak1_claw:
           Value: true
         ak1_gps:
           Value: false
@@ -237,6 +241,22 @@ Visualization Manager:
           Value: false
         ak1_odom:
           Value: false
+        ak1_ring:
+          Value: true
+        ak2_base_link:
+          Value: true
+        ak2_claw:
+          Value: true
+        ak2_gps:
+          Value: true
+        ak2_imu_link:
+          Value: true
+        ak2_odom:
+          Value: true
+        ak2_ring:
+          Value: true
+        goal_location:
+          Value: true
         gps:
           Value: false
         map:
@@ -246,8 +266,6 @@ Visualization Manager:
         vive_world:
           Value: false
         vive_world_orientation:
-          Value: false
-        zero_location:
           Value: false
       Marker Scale: 1
       Name: TF
@@ -259,17 +277,32 @@ Visualization Manager:
           ak1_gps:
             ak1_odom:
               ak1_base_link:
+                ak1_claw:
+                  {}
                 ak1_imu_link:
                   {}
+                ak1_ring:
+                  {}
+                rover_goal:
+                  {}
+          ak2_gps:
+            ak2_odom:
+              ak2_base_link:
+                ak2_claw:
+                  {}
+                ak2_imu_link:
+                  {}
+                ak2_ring:
+                  {}
           map:
-            rover_goal:
+            goal_location:
               {}
             vive_world:
-              LHB_892315F9:
+              LHB_7B32DB97:
+                {}
+              LHR_09DE74EE:
                 {}
               LHR_0EB0243A:
-                {}
-              zero_location:
                 {}
             vive_world_orientation:
               {}
@@ -332,5 +365,5 @@ Window Geometry:
   Views:
     collapsed: true
   Width: 1215
-  X: 520
-  Y: 33
+  X: 510
+  Y: 23
