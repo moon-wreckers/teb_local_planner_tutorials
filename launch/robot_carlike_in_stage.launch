@@ -49,7 +49,7 @@
 		<param name="initial_pose_y"            value="2"/>
 		<param name="initial_pose_a"            value="0"/>
 	</node>
-
+	<node pkg="teb_local_planner_tutorials" name="AM_publish_test_obstacles" type="AM_publish_test_obstacles.py"/>
 	  <!--  **************** Visualisation ****************  -->
 	  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find teb_local_planner_tutorials)/cfg/rviz_navigation.rviz"/>
     <!--/group-->
