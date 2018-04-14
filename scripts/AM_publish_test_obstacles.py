@@ -68,7 +68,7 @@ def publish_obstacle_msg():
 	# Vary y component of the point obstacle
 		try:
 			rospy.loginfo('tf reached')
-			(trans,rot) = listener.lookupTransform('map', 'ak2_base_link', rospy.Time(0))
+			(trans,rot) = listener.lookupTransform('map', 'ak1_base_link', rospy.Time(0))
 
 		except (tf.LookupException, tf.ConnectivityException, tf.ExtrapolationException):
 			continue
